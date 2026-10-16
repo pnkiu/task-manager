@@ -7,12 +7,13 @@ import {
 } from 'typeorm';
 
 export enum TaskStatus {
+  // enum là một danh sách giá trị cố định
   TODO = 'TODO',
   IN_PROGRESS = 'IN_PROGRESS',
   DONE = 'DONE',
 }
 
-@Entity('tasks')
+@Entity('tasks') // @Entity đại diện cho 1 bảng
 export class Task {
   @PrimaryGeneratedColumn()
   id: number;
